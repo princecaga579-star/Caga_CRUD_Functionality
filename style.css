@@ -1,0 +1,121 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #eaf7ff;
+    padding: 30px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #087ea4;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.form-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 30px;
+}
+
+input,
+select {
+    padding: 12px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#saveButton {
+    background: #087ea4;
+    color: white;
+}
+
+#saveButton:hover {
+    background: #065f7c;
+}
+
+#cancelButton {
+    background: #777;
+    color: white;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th {
+    background: #087ea4;
+    color: white;
+    padding: 12px;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+
+tr:hover {
+    background: #f3fbff;
+}
+
+.edit-btn {
+    background: #f0ad4e;
+    color: white;
+    margin-right: 5px;
+}
+
+.delete-btn {
+    background: #d9534f;
+    color: white;
+}
+
+#emptyMessage {
+    text-align: center;
+    color: #777;
+    margin-top: 20px;
+}
+
+@media (max-width: 800px) {
+    .form-container {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding: 10px;
+    }
+}

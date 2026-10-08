@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquarium Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>🐠 Aquarium Management System</h1>
+        <p class="subtitle">Fish Records CRUD Application</p>
+
+        <div class="form-container">
+            <input type="hidden" id="fishId">
+
+            <input type="text" id="fishName" placeholder="Fish Name">
+            <input type="text" id="species" placeholder="Species">
+
+            <select id="waterType">
+                <option value="">Select Water Type</option>
+                <option value="Freshwater">Freshwater</option>
+                <option value="Saltwater">Saltwater</option>
+            </select>
+
+            <input type="number" id="quantity" placeholder="Quantity" min="1">
+            <input type="text" id="tankNumber" placeholder="Tank Number">
+
+            <select id="status">
+                <option value="">Select Status</option>
+                <option value="Healthy">Healthy</option>
+                <option value="Needs Attention">Needs Attention</option>
+                <option value="Sick">Sick</option>
+            </select>
+
+            <button id="saveButton" onclick="saveFish()">Add Fish</button>
+            <button id="cancelButton" onclick="cancelEdit()" style="display:none;">
+                Cancel
+            </button>
+        </div>
+
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Fish Name</th>
+                        <th>Species</th>
+                        <th>Water Type</th>
+                        <th>Quantity</th>
+                        <th>Tank</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody id="fishTableBody">
+                </tbody>
+            </table>
+        </div>
+
+        <p id="emptyMessage">No fish records found.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
